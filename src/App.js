@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import {MyClassComponent,MyFunComponent,ListOfTenThings,Repeat} from './MyComponent';
+import MyComponent from './EventHandling';
 import './App.css';
+import Parent from './Parent';
+import ConditionalRendering from './ConditionalRendering';
+import MapForList from './MapForList';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (<>
+   {/* <h1 className='App'>Hello World</h1>
+   <MyFunComponent name="pavani">Hello I am child component</MyFunComponent>
+   <MyClassComponent name="ammulu"></MyClassComponent>
+   <ListOfTenThings></ListOfTenThings>
+   <MyComponent></MyComponent> */}
+   {/* <Parent></Parent> */}
+   {/* <ConditionalRendering></ConditionalRendering> */}
+   <MapForList></MapForList>
+  </>
   );
 }
 

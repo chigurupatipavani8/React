@@ -1,0 +1,5 @@
+.first{
+    color:greenyellow;
+}
+/*module.css is applied to that particular scope only not applicable to child component like regular css*/
+/*regular css will have global scope but, module.css will have the local scope*/
