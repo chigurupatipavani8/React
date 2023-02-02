@@ -4,6 +4,8 @@ import './App.css';
 import Parent from './Parent';
 import ConditionalRendering from './ConditionalRendering';
 import MapForList from './MapForList';
+import FormHandling from './FormHandling';
+import ParentLifeCycle from './ParentLifeCycle';
 
 function App() {
   return (<>
@@ -14,7 +16,9 @@ function App() {
    <MyComponent></MyComponent> */}
    {/* <Parent></Parent> */}
    {/* <ConditionalRendering></ConditionalRendering> */}
-   <MapForList></MapForList>
+   {/* <MapForList></MapForList> */}
+   {/* <FormHandling></FormHandling> */}
+   <ParentLifeCycle></ParentLifeCycle>
   </>
   );
 }
