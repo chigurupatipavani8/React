@@ -7,24 +7,43 @@ class ParentLifeCycle extends PureComponent {
         super(props)
 
         this.state = {
-           name:'parent lifecycle' 
+           name:'parent lifecycle' ,
+           show:true
         }
     }
     static getDerivedStateFromProps(props, state) {
         console.log("getDerivedStateFromProps of parent")
         return null;
       }
-      setState1=(name1)=>{
+      setState1=(name)=>{
           this.setState({
-              name:name1
+              name:name
+              
           })
-      }
+          console.log("hello1",this.state)
 
+      }
+      shouldComponentUpdate() {
+          console.log("shouldComponentUpdate of parent")
+        return true;
+      }
+      getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("getSnapshotBeforeUpdate of parent")
+        return null;
+      }
+      componentDidUpdate() {
+        console.log("componentDidUpdate of parent")
+      }
+      componentWillUnmount() {
+        console.log("ComponentWillUnmounted of parent");
+      }
     render() {
         console.log("render of parent")
 
         return (
-            <div><div>{this.state.name}</div><div><ChildLifeCycle name={"parent's prop"} changePState={this.setState1}></ChildLifeCycle></div></div>
+            <div><div>{this.state.name}</div><div>{this.state.show && <ChildLifeCycle name={"parent's prop"} changePState={this.setState1}></ChildLifeCycle>}</div>
+            <div><button onClick={()=>{this.setState({show:false})}}> remove child</button></div>
+            </div>
         )
     }
     componentDidMount(){

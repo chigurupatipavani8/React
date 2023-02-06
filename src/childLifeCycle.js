@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 
-class ChildLifeCycle extends PureComponent {
+class ChildLifeCycle extends Component {
 
     constructor(props) {
         console.log("constructor of child")
@@ -16,17 +16,32 @@ class ChildLifeCycle extends PureComponent {
         // return {name:props.name};// change the state name field
         return null;
       }
-      changeParentState=()=>{
+      changechildState=()=>{
         this.props.changePState("from child")
+        console.log("hello1")
       }
+      shouldComponentUpdate() {
+        console.log("shouldComponentUpdate of child")
+      return true;
+    }
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log("getSnapshotBeforeUpdate of child")
+        return null;
 
+      }
+      componentDidUpdate() {
+        console.log("componentDidUpdate of child")
+      }
+      componentWillUnmount() {
+        console.log("ComponentWillUnmounted of child");
+      }
     render() {
         console.log("render of child"+this.state.name)
 
         return (
             <div><div>{this.state.name}</div>
             <div>{this.state.name1}</div>
-            <button onClick={this.changeParentState}>click me</button>
+            <button onClick={this.changechildState}>click me</button>
             </div>
         )
     }

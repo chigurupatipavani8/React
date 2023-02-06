@@ -6,6 +6,8 @@ import ConditionalRendering from './ConditionalRendering';
 import MapForList from './MapForList';
 import FormHandling from './FormHandling';
 import ParentLifeCycle from './ParentLifeCycle';
+import Header from './Header';
+import UseStateHook1 from './useStateHook1';
 
 function App() {
   return (<>
@@ -18,8 +20,10 @@ function App() {
    {/* <ConditionalRendering></ConditionalRendering> */}
    {/* <MapForList></MapForList> */}
    {/* <FormHandling></FormHandling> */}
-   <ParentLifeCycle></ParentLifeCycle>
-  </>
+   {/* <ParentLifeCycle></ParentLifeCycle> */}
+   {/* <Header></Header> */}
+   <UseStateHook1></UseStateHook1>
+   </>
   );
 }
 
