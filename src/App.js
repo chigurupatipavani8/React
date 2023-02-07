@@ -8,6 +8,9 @@ import FormHandling from './FormHandling';
 import ParentLifeCycle from './ParentLifeCycle';
 import Header from './Header';
 import UseStateHook1 from './useStateHook1';
+import UseEffectHook from './useEffectHook';
+import ParentuseContextHook from './ParentuseContextHook';
+import UseReducerHook from './useReducerHook';
 
 function App() {
   return (<>
@@ -22,7 +25,10 @@ function App() {
    {/* <FormHandling></FormHandling> */}
    {/* <ParentLifeCycle></ParentLifeCycle> */}
    {/* <Header></Header> */}
-   <UseStateHook1></UseStateHook1>
+   {/* <UseStateHook1></UseStateHook1> */}
+   {/* <UseEffectHook></UseEffectHook> */}
+   {/* <ParentuseContextHook></ParentuseContextHook> */}
+   <UseReducerHook></UseReducerHook>
    </>
   );
 }
